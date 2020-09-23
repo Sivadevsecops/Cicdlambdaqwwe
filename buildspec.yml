@@ -2,7 +2,7 @@ version: 0.2
 phases:
   install:
      commands:
-         - aws cloudformation package --region eu-west-2 --template-file samTemplate.yml  --s3-bucket pdpmalaths-lambda-pipeline  --output-template-file packaged-template.yml --stack-name mylambdastack
+         - aws cloudformation package --region eu-west-2 --template-file samTemplate.yml  --s3-bucket pdpmalaths-lambda-pipeline  --output-template-file packaged-template.yml 
 artifacts:
    type: zip
    files:

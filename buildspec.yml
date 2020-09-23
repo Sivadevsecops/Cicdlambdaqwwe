@@ -1,10 +1,12 @@
 version: 0.1
 phases:
+  install:
+    runtime-versions:
+        python: 3.8
   build:
      commands:
-         - aws cloudformation package --region eu-west-2 --template-file samTemplate.yaml  --s3-bucket pdpmalaths-lambda-pipeline  --output-template-file outputSamTemplate.yaml
+         - sam package--region eu-west-2 --template-file samTemplate.yaml  --s3-bucket pdpmalaths-lambda-pipeline  --output-template-file packaged-template.yml
 artifacts:
    type: zip
    files:
-     - samTemplate.yaml
-     - outputSamTemplate.yaml
+     - packaged-template.yml

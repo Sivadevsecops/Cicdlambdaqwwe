@@ -1,0 +1,20 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Function and API for finding regions
+
+Resources:
+  CDDemoLambda:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ./lambdacode
+      Handler:lambda_function.lambda_handler
+      Runtime: python3.6
+      Events:
+         getAZsAPI:
+           Type: Api
+           Properties:
+             Path: /getazx
+             Method: get
+      Environment:
+        variables:
+           REGION: ap-southeast-1

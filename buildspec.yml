@@ -5,7 +5,7 @@ phases:
         python: 3.8
   build:
      commands:
-         - sam package--region eu-west-2 --template-file samTemplate.yaml  --s3-bucket pdpmalaths-lambda-pipeline  --output-template-file packaged-template.yml
+         - sam package--region eu-west-2 --template-file samTemplate.yml  --s3-bucket pdpmalaths-lambda-pipeline  --output-template-file packaged-template.yml
 artifacts:
    type: zip
    files:

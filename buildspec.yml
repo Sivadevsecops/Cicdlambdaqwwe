@@ -1,0 +1,10 @@
+version: 0.1
+phases:
+  build:
+     commands:
+         - aws cloudformation package --region eu-west-2 --template-file samTemplate.yaml  --s3-bucket pdpmalaths-lambda-pipeline  --output-template-file outputSamTemplate.yaml
+artifacts:
+   type: zip
+   files:
+     - samTemplate.yaml
+     - outputSamTemplate.yaml

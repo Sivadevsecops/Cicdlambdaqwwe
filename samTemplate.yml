@@ -9,6 +9,7 @@ Resources:
       CodeUri: ./
       Handler: lambda_function.lambda_handler
       Runtime: python3.6
+      Role: arn:aws:iam::929907503080:role/service-role/AWSCodePipelineServiceRole-eu-west-2-lambdaCDDemopipeline
       Events:
          getAZsAPI:
            Type: Api

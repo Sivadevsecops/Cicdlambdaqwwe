@@ -6,7 +6,7 @@ Resources:
   CDDemoLambda:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: ./lambdacode
+      CodeUri: ./
       Handler:lambda_function.lambda_handler
       Runtime: python3.6
       Events:

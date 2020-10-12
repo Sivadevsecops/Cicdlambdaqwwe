@@ -5,5 +5,6 @@ def lambda_handler(event, context):
     response = ec2.describe_availability_zones()
     print(response)
     print(Dummy)
+    print(shiva)
     return {"statuscode": 200, "body": json.dumps(response)}
     
